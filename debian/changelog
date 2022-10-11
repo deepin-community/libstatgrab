@@ -1,0 +1,183 @@
+libstatgrab (0.92.1-1) UNRELEASED; urgency=medium
+
+  * update
+
+ -- Bartosz Fenski <fenio@debian.org>  Wed, 22 Jun 2022 15:09:31 +0800
+
+libstatgrab (0.92.1-1) unstable; urgency=medium
+
+  * The Akamai Technologies paid volunteer days release.
+  * New upstream release. (Closes: #997241, #993147)
+  * Bumped DH compatibility level to 13.
+
+ -- Bartosz Fenski <fenio@debian.org>  Tue, 28 Dec 2021 15:06:54 +0100
+
+libstatgrab (0.92-2) unstable; urgency=medium
+
+  * Source only upload.
+
+ -- Bartosz Fenski <fenio@debian.org>  Sat, 05 Oct 2019 10:58:25 +0200
+
+libstatgrab (0.92-1) unstable; urgency=medium
+
+  * New upstream version.
+    - fixes crash after couple of minutes (Closes: #916220)
+  * Bumped Standards-Version.
+  * The Akamai Technologies paid volunteer days release.
+ 
+ -- Bartosz Fenski <fenio@debian.org>  Mon, 30 Sep 2019 09:23:37 +0200
+
+libstatgrab (0.91-1) unstable; urgency=low
+
+  * New upstream version (Closes: #804480)
+  * ACK NMUs, thanks Manuel!
+  * Bumped Standards-Version (no changes needed)
+
+ -- Bartosz Fenski <fenio@debian.org>  Mon, 14 Dec 2015 14:27:37 +0100
+
+libstatgrab (0.90-1.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Apply patch from Ubuntu to use dh-autoreconf (instead of
+    autotools-dev) for better support of new architectures; and add
+    build-dep on pkg-config, since libstatgrab's autoconf magic needs
+    pkg-config's AC_* macros.  Thanks Adam Conrad (Closes: #742085)
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Tue, 20 May 2014 19:27:57 +0100
+
+libstatgrab (0.90-1.1) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * Fix tests causing FTBFS in some arches due to failing to find
+    /etc/mtab fix-ftbfs-734368.patch (Closes: #734368)
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sat, 08 Mar 2014 16:42:36 +0000
+
+libstatgrab (0.90-1) unstable; urgency=low
+
+  * New upstream version.
+    - new binary package name because of SONAME change.
+    - fixes FTBFS on arm64 (Closes: #717836)
+  * Bumped Standards-Version and DH compatibility version.
+
+ -- Bartosz Fenski <fenio@debian.org>  Wed, 25 Dec 2013 18:41:32 +0100
+
+libstatgrab (0.17-1) unstable; urgency=low
+
+  * New upstream version (Closes: #614618)
+  * ACK previous NMU, thanks1
+  * Fixes typos in manpage (Closes: #645510)
+
+ -- Bartosz Fenski <fenio@debian.org>  Wed, 15 Feb 2012 18:44:30 +0100
+
+libstatgrab (0.16-0.1) unstable; urgency=low
+
+  * Porter NMU
+  * New upstream release to include armel support
+    closes: #449586, #470468
+  * Move homepage to it's own field
+  * Make binNMU safe
+
+ -- Riku Voipio <riku.voipio@iki.fi>  Sun, 13 Apr 2008 15:15:52 +0300
+
+libstatgrab (0.15-1) unstable; urgency=low
+
+  * New upstream release. 
+
+ -- Bartosz Fenski <fenio@debian.org>  Thu, 11 Oct 2007 13:32:17 +0200
+
+libstatgrab (0.14-1) unstable; urgency=low
+
+  * New upstream release.
+    - saidar now supports colored output (Closes: #400546) 
+
+ -- Bartosz Fenski <fenio@debian.org>  Sat, 14 Apr 2007 16:42:52 +0200
+
+libstatgrab (0.13-1) unstable; urgency=low
+
+  * New upstream release. 
+
+ -- Bartosz Fenski <fenio@debian.org>  Tue, 21 Mar 2006 15:15:19 +0100
+
+libstatgrab (0.12-1) unstable; urgency=low
+
+  * New upstream release.
+    - includes manpages, so they were removed from diff.
+  * Bumped Standards-Version (no changes needed).
+  * Conflicts with previous version due to soname change.  
+
+ -- Bartosz Fenski <fenio@debian.org>  Thu, 18 Aug 2005 13:10:03 +0200
+
+libstatgrab (0.11.1-2) unstable; urgency=low
+
+  * First official Debian release (Closes: #304401)
+  * Lot of things has been rewritten, cause upstream scripts were almost
+    two years old:
+    - changed maintainer to myself, mentioned Tim's work
+    - extended copyright info
+    - fixed build-time dependencies
+    - extended descriptions
+    - bumped standards version (minor changes needed)
+    - included proper SONAME version in library name
+    - updated watch file to version 2
+    - we're now including examples in -dev package
+    - moved from dh_movefiles to dh_install
+    - many fixes in debian/rules file
+  * Missing manpages has been written and sent to upstream.
+
+ -- Bartosz Fenski <fenio@debian.org>  Tue, 19 Apr 2005 21:37:46 +0200    
+
+libstatgrab (0.11.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Tim Bishop <tim@bishnet.net>  Wed,  2 Mar 2005 17:01:34 +0000
+
+libstatgrab (0.11-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Tim Bishop <tim@bishnet.net>  Fri, 12 Nov 2004 11:38:30 +0000
+
+libstatgrab (0.10.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Tim Bishop <tim@bishnet.net>  Wed, 25 Aug 2004 21:14:26 +0100
+
+libstatgrab (0.10-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Tim Bishop <tim@bishnet.net>  Wed, 19 May 2004 20:33:20 +0100
+
+libstatgrab (0.9-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Tim Bishop <tim@bishnet.net>  Tue,  9 Mar 2004 20:54:40 +0000
+
+libstatgrab (0.8.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Tim Bishop <tim@bishnet.net>  Tue, 10 Feb 2004 21:56:22 +0000
+
+libstatgrab (0.8.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Tim Bishop <tim@bishnet.net>  Wed, 21 Jan 2004 16:28:01 +0000
+
+libstatgrab (0.8-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Tim Bishop <tim@bishnet.net>  Tue,  6 Jan 2004 20:57:11 +0000
+
+libstatgrab (0.7-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Tim Bishop <tim@bishnet.net>  Wed, 22 Oct 2003 19:16:49 +0100
+

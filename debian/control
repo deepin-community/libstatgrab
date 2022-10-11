@@ -1,0 +1,53 @@
+Source: libstatgrab
+Section: libs
+Priority: optional
+Maintainer: Bartosz Fenski <fenio@debian.org>
+Build-Depends: debhelper-compat (=13), libncurses5-dev, pkg-config
+Homepage: https://libstatgrab.org
+Standards-Version: 4.4.0
+
+Package: libstatgrab10
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: library being useful interface to system statistics
+ libstatgrab is a library which provides an easy to use interface
+ for accessing system statistics. Available statistics include CPU,
+ Load, Memory, Swap, Disk I/O, and Network I/O.
+
+Package: libstatgrab-dev
+Section: libdevel
+Architecture: any
+Depends: libstatgrab10 (= ${binary:Version}), ${misc:Depends}
+Conflicts: libstatgrab-dev (<< 0.12-1)
+Description: development files of library for system statistics
+ libstatgrab is a library which provides an easy to use interface
+ for accessing system statistics. Available statistics include CPU,
+ Load, Memory, Swap, Disk I/O, and Network I/O.
+ .
+ This package contains files needed if you wish to use the libstatgrab
+ library in your own programs. 
+
+Package: saidar
+Section: utils
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: curses-based program which displays live system statistics
+ saidar is a curses-based application to display system statistics.
+ Statistics include CPU, processes, load, memory, swap, network I/O and
+ disks I/O along with their free space.
+ .
+ saidar utilizes libstatgrab library.
+
+Package: statgrab
+Section: utils
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: mrtg
+Description: sysctl-style access to system statistics
+ statgrab provides an access to system statistics using a sysctl-style 
+ interface. This is useful for applications that don't want to make 
+ library calls, but still want to access the statistics. An example is mrtg, 
+ for which scripts are provided to generate configuration files.
+ .
+ statgrab utilizes libstatgrab library.

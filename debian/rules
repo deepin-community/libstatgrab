@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+%:
+	dh $@ --with autoreconf
+
+# Disable dh_missing
+override_dh_missing:
+
+execute_after_dh_fixperms:
+	rm -f debian/libstatgrab-dev/usr/lib/x86_64-linux-gnu/libstatgrab.la
+

@@ -1,0 +1,18 @@
+Description: Fix FTBFS in many arches due to FS tests
+ The cause is that it cannot find /etc/mtab (or equivalent) in some arches.  The
+ new standard place for this is '/proc/self/mounts'.  "./configure
+ --with-mnttab='/proc/self/mounts'" does not seem to work.
+Author: Manuel A. Fernandez Montecelo <mafm@debian.org>
+Last-Update: 2014-03-08
+Bug-Debian: http://bugs.debian.org/734368
+--- a/src/libstatgrab/disk_stats.c
++++ b/src/libstatgrab/disk_stats.c
+@@ -807,7 +807,7 @@
+ #  endif
+ # endif
+ # ifndef MNT_MNTTAB
+-	static const char *mnttabs[] = { "/etc/mnttab", "/etc/mtab" };
++	static const char *mnttabs[] = { "/proc/self/mounts", "/etc/mnttab", "/etc/mtab" };
+ 	unsigned i;
+ # endif
+ #elif defined(WIN32)
